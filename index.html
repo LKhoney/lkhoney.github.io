@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eef0ea" />
+    <title>Seasons — Photography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Seasons home">
+        <span class="brand-mark">S</span>
+        <span>Seasons</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="work">
+        <p class="eyebrow">Photography collection · 2026</p>
+        <h1>One place,<br /><em>four transformations.</em></h1>
+        <p class="intro-copy">A visual study of change—moving from frost and stillness to sunlight and bloom.</p>
+      </section>
+
+      <section class="comparison-section" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured study</p>
+            <h2 id="comparison-title">Winter <span>→</span> Summer</h2>
+          </div>
+          <p class="drag-hint"><span aria-hidden="true">↔</span> Drag to compare</p>
+        </div>
+
+        <div class="comparison" id="comparison" style="--position: 50%">
+          <img class="comparison-image after-image" src="assets/summer.jpeg" alt="Bright turquoise ocean and beach in summer" />
+          <div class="before-layer">
+            <img class="comparison-image" src="assets/winter.jpeg" alt="Snow-covered trees and road in winter" />
+          </div>
+          <div class="comparison-line" aria-hidden="true">
+            <span class="comparison-knob">↔</span>
+          </div>
+          <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Compare winter and summer" />
+          <span class="image-label before-label">Before</span>
+          <span class="image-label after-label">After</span>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow">The collection</p>
+            <h2 id="gallery-title">Four states of change</h2>
+          </div>
+          <div class="gallery-tools">
+            <div class="sort-controls" role="group" aria-label="Sort photographs">
+              <button class="sort-button active" type="button" data-sort="alphabetical" aria-pressed="true">A–Z</button>
+              <button class="sort-button" type="button" data-sort="seasonal" aria-pressed="false">Seasonal</button>
+            </div>
+            <div class="gallery-count"><span id="current-count">01</span> / 04</div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <article class="gallery-card" data-season="winter" data-before="assets/winter.jpeg" data-after="assets/summer.jpeg" data-title="Winter → Summer">
+            <button class="card-image" type="button" aria-label="View Winter to Summer comparison">
+              <img src="assets/winter.jpeg" alt="Snowy winter road" />
+              <span>01</span>
+            </button>
+            <h3>Winter <span>→</span> Summer</h3>
+            <p>Stillness / Energy</p>
+          </article>
+          <article class="gallery-card" data-season="spring" data-before="assets/winter.jpeg" data-after="assets/spring.jpeg" data-title="Winter → Spring">
+            <button class="card-image" type="button" aria-label="View Winter to Spring comparison">
+              <img src="assets/spring.jpeg" alt="Cherry blossoms and a blooming road in spring" />
+              <span>02</span>
+            </button>
+            <h3>Winter <span>→</span> Spring</h3>
+            <p>Silence / Bloom</p>
+          </article>
+          <article class="gallery-card" data-season="summer" data-before="assets/winter.jpeg" data-after="assets/summer.jpeg" data-title="Winter → Summer">
+            <button class="card-image" type="button" aria-label="View Winter to Summer comparison">
+              <img src="assets/summer.jpeg" alt="Turquoise ocean in summer" />
+              <span>03</span>
+            </button>
+            <h3>Light <span>→</span> Radiance</h3>
+            <p>Cool / Warm</p>
+          </article>
+          <article class="gallery-card" data-season="fall" data-before="assets/spring.jpeg" data-after="assets/fall.jpeg" data-title="Spring → Fall">
+            <button class="card-image" type="button" aria-label="View Spring to Fall comparison">
+              <img src="assets/fall.jpeg" alt="Golden autumn tree and fallen leaves" />
+              <span>04</span>
+            </button>
+            <h3>Spring <span>→</span> Fall</h3>
+            <p>Bloom / Release</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <p class="eyebrow">About the series</p>
+        <p class="about-copy">The year is not a cycle—it is a sequence of<br />ways of seeing the same world.</p>
+        <div class="about-meta">
+          <span>Seasonal study</span>
+          <span>Four photographs</span>
+          <span>2026</span>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Available for selected photography projects.</p>
+      <a href="mailto:hello@seasons.studio">Let’s create <span>↗</span></a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
